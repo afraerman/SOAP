@@ -1,0 +1,110 @@
+{
+	"simulation": {
+		"start_time": "2014-08-23T08:29:43.000",
+		"interval": 172800,
+		"step": 1.0
+	},
+	"spacecraft": {
+		"state_vector": [-81992.508, 284161.026, -51280.062, -0.412511, 0.287488, 0.34501],
+		"quaternion": [0.1260455, -0.9330310, 0.2089708, 0.2643803],
+		"angular_velocity": [0.0, 0.0, 0.0],
+		"inertia_tensor": [15560.0, 17560.0, 20560.0],
+		"mass": 3236.0
+	},
+	"geometry": {
+		"polygons": {
+			"count": 3,
+			"parameters": [
+				{
+					"position": [-1.025, 0.0, 0.0],
+					"normal": [-1.0, 0.0, 0.0],
+					"area": 6.4,
+					"reflectivity": 0.8656,
+					"specularity": 0.134
+				},
+				{
+					"position": [0.0, 0.0, 1.265],
+					"normal": [0.0, 0.0, 1.0],
+					"area": 5.2,
+					"reflectivity": 0.8656,
+					"specularity": 0.134
+				},
+				{
+					"position": [0.0, 0.0, 2.931],
+					"normal": [-1.0, 0.0, 0.0],
+					"area": 21.7,
+					"reflectivity": 0.8656,
+					"specularity": 0.134
+				}
+			]
+		},
+		"solar_panels": {
+			"count": 2,
+			"parameters": [
+				{
+					"position": [0.0, -4.89, 0.0],
+					"normal": [-1.0, 0.0, 0.0],
+					"area": 14.86,
+					"reflectivity": 0.09,
+					"specularity": 1.0,
+					"rai": 1
+				},
+				{
+					"position": [0.0, 4.89, 0.0],
+					"normal": [-1.0, 0.0, 0.0],
+					"area": 14.86,
+					"reflectivity": 0.09,
+					"specularity": 1.0,
+					"rai": 1
+				}
+			]
+		}
+	},
+	"control_systems": {
+		"reaction_wheels": {
+			"count": 4,
+			"parameters": [
+				{
+					"location": [0.0, 0.0, 0.0],
+					"angles": [30, -90],
+					"inertia": [0.001, 0.001, 0.02388],
+					"mass": 5.0,
+					"initial_speed": [0.0, 0.0, 0.0, 0.0],
+					"speed_limit": 6280.0,
+					"pyramid_apex": "X"
+				}
+			]
+		},
+		"control_order": {
+			"first": "r",
+			"second": "0"
+		}
+	},
+	"attitude_modes": {
+		"stop_motion": {
+			"count": 1,
+			"parameters": [
+				{
+					"quaternion": [0.1260455, -0.9330310, 0.2089708, 0.2643803],
+					"start_time": "2014-08-22T20:23:22.000",
+					"stop_time": "2020-01-01T12:00:00.0"
+				}
+			]
+		}
+	},
+	"forces": {
+		"gravity_force": true,
+		"outer_gravity": true,
+		"solar_pressure_force": true,
+		"gravity_torque": true,
+		"solar_pressure_torque": true,
+		"magnetic_torque": false
+	},
+	"filenames": {
+		"output": {
+			"save_path": "./spectrR_const_att.txt",
+			"telemetry_path": "./spectrR_const_att_telemetry.txt"
+		}
+	}
+
+}
