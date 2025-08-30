@@ -1,15 +1,18 @@
 # SOAP: Spacecraft Orbit and Attitude Prediction tool
 
-Программно-вычислительный комплекс разработан в лаборатории баллистико-навигационного обеспечения космических проектов Астрокосмического центра Физического Института имени П.Н. Лебедева РАН
+This software was developed in the Laboratory of Ballistic And Navigation Support For Space Projects of Astro Space Center of PN Lebedev Physics Institute
 
-## Необходимые файлы
-- ввиду большого объёма, файл эфемерид необходимо загрузить в папку Files с сайта https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/ (по умолчанию используются de440.bsp)
-- по той же причине файл EGM2008.dat содержит информацию о гармониках лишь до 500 порядка
+## Required Files:
 
-## Запуск
-На ОС Linux запуск осуществляется запуском программы /linux/build/soap. Для работы программы достаточно указать путь к файлу параметров проекта.
+- Due to its large size, the ephemeris file must be downloaded into the "Files" folder from the website https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/ (de440.bsp is used by default).
+- For the same reason, the EGM2008.dat file contains information on harmonics only up to the 500th order.
 
-## Файлы параметров
-- all_parameters.json --- файл содержит все доступные параметры, но сам не может являться входным файлом программы
-- gracefo.json --- файл содержит параметры запуска космического аппарата, схожего по характеристикам с аппаратом GRACE-FO C
-- spectrR.json --- файл содержит параметры запуска космического аппарата, схожего по характеристикам с аппаратом Спектр-Р космическогок проекта РадиоАстрон.
+## Execution:
+
+On Linux OS, execution is performed by running the /linux/build/soap program. To run the program, it is sufficient to specify the path to the project parameters file.
+
+## Parameter Files:
+
+- all_parameters.json --- This file contains all available parameters but cannot be used as the program's input file itself.
+- gracefo.json --- This file contains the launch parameters of a spacecraft similar in characteristics to the GRACE-FO C spacecraft.
+- spectrR.json --- This file contains the launch parameters of a spacecraft similar in characteristics to the Spektr-R spacecraft of the RadioAstron space project.
