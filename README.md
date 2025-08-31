@@ -16,3 +16,7 @@ On Linux OS, execution is performed by running the /linux/build/soap program. To
 - all_parameters.json --- This file contains all available parameters but cannot be used as the program's input file itself.
 - gracefo.json --- This file contains the launch parameters of a spacecraft similar in characteristics to the GRACE-FO C spacecraft.
 - spectrR.json --- This file contains the launch parameters of a spacecraft similar in characteristics to the Spektr-R spacecraft of the RadioAstron space project.
+
+## Troubleshooting
+
+For OS Windows in case of "No jsoncpp.dll found" error place jsoncpp.dll into C:\Windows\System32 directory.
