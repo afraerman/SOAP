@@ -1,0 +1,219 @@
+{
+  "simulation": {
+    "start_time": "2016-05-31T00:00:00.0",
+    "interval": 10000,
+    "step": 1.0,
+    "output_step": 1.0,
+    "orbit_file": "/media/alexey/Disk/asc/orbit.txt"
+  },
+  "spacecraft": {
+    "state_vector": [5957.4, 0.0, 3439.5, 0.0, 7.6, 0.0],
+    "quaternion": [0.19378, 0.033945, 0.010695, 0.9804],
+    "angular_velocity": [0.0, 0.0, 0.0],
+    "inertia_tensor": [27.0, 200.0, 200.0],
+    "mass": 100.0
+  },
+  "geometry": {
+    "polygons": {
+      "count": 2,
+      "parameters": [
+        {
+          "position": [0.75, 0.0, 0.0],
+          "normal": [1.0, 0.0, 0.0],
+          "area": 1.6,
+          "albedo": 0.5,
+          "specularity": 0.5
+        },
+        {
+          "position": [-0.75, 0.0, 0.0],
+          "normal": [-1.0, 0.0, 0.0],
+          "area": 1.6,
+          "albedo": 0.5,
+          "specularity": 0.5
+        }
+      ]
+    },
+    "solar_panels": {
+      "count": 2,
+      "parameters": [
+      {
+        "position": [-1.25, 0.0, 0.0],
+        "normal": [0.0, 1.0, 0.0],
+        "area": 0.8,
+        "albedo": 0.5,
+        "specularity": 0.5,
+        "rai": 0
+      },
+      {
+        "position": [0.0, 1.25, 0.0],
+        "normal": [0.0, 0.0, 1.0],
+        "area": 0.8,
+        "albedo": 0.5,
+        "specularity": 0.5,
+        "rai": 1
+      }
+    ]
+    },
+    "vtk_file": "/media/alexey/Disk/asc/polygons.vtk"
+  },
+  "control_systems": {
+    "gyrostats": {
+      "count": 3,
+      "parameters": [
+          {
+            "location": [0.0, 0.0, 0.0],
+            "angular_velocity": 0.0,
+            "mass": 5.0,
+            "inertia": [0.02388, 0.001, 0.001],
+            "limits": [628.0, 0.0, 0.0]
+          },
+          {
+            "location": [0.0, 0.0, 0.0],
+            "angular_velocity": 0.0,
+            "mass": 5.0,
+            "inertia": [0.001, 0.02388, 0.001],
+            "limits": [0.0, 628.0, 0.0]
+          },
+          {
+            "location": [0.0, 0.0, 0.0],
+            "angular_velocity": 0.0,
+            "mass": 5.0,
+            "inertia": [0.001, 0.001, 0.02388],
+            "limits": [0.0, 0.0, 628.0]
+          }
+        ]
+    },
+    "reaction_wheels": {
+      "count": 8,
+      "parameters": [
+        {
+          "location": [1.0, 0.0, 0.0],
+          "angles": [30, -90],
+          "inertia": [0.001, 0.001, 0.01],
+          "mass": 5.0,
+          "initial_speed": [0.0, 0.0, 0.0, 0.0],
+          "speed_limit": 628.0,
+          "pyramid_apex": "Y"
+        },
+        {
+          "location": [1.0, 0.0, 0.0],
+          "angles": [-30, -90],
+          "inertia": [0.001, 0.001, 0.01],
+          "mass": 5.0,
+          "initial_speed": [0.0, 0.0, 0.0, 0.0],
+          "speed_limit": 628.0,
+          "pyramid_apex": "Y"
+        }
+        ]
+    },
+    "magnetorquers":{
+      "count": 2,
+      "parameters": [
+        {
+          "max_dipole": [10.0, 0.0, 0.0],
+          "mass": 0.3,
+          "current": 0.1
+        },
+        {
+          "max_dipole": [0.0, 0.0, 10.0],
+          "mass": 0.3,
+          "current": 0.1
+        }
+      ]
+    },
+    "pulse_engines": {
+      "count": 6,
+      "parameters": [
+        {
+          "position": [0.75, 0.75, 0.0],
+          "limits": [0.0, 200000.0, 0.0],
+          "mass": 10.0
+        },
+        {
+          "position": [0.75, 0.0, 0.75],
+          "limits": [0.0, 0.0, 200000.0],
+          "mass": 10.0
+        },
+        {
+          "position": [0.0, 0.75, 0.75],
+          "limits": [0.0, 0.0, 200000.0],
+          "mass": 10.0
+        },
+        {
+          "position": [-0.75, -0.75, 0.0],
+          "limits": [0.0, 200000.0, 0.0],
+          "mass": 10.0
+        },
+        {
+          "position": [-0.75, 0.0, -0.75],
+          "limits": [0.0, 0.0, 200000.0],
+          "mass": 10.0
+        },
+        {
+          "position": [0.0, -0.75, -0.75],
+          "limits": [0.0, 0.0, 200000.0],
+          "mass": 10.0
+        }
+      ]
+    },
+    "control_order": {
+      "first": "r",
+      "second": "m"
+    }
+  },
+  "attitude_modes": {
+    "stop_motion": {
+      "count": 2,
+      "parameters": [
+          {
+            "quaternion": [0.19378, 0.033945, 0.010695, 0.9804],
+            "start_time": "2016-05-31T00:00:00.0",
+            "stop_time": "2017-05-31T13:48:00.0"
+          },
+          {
+            "quaternion": [1.0, 0.0, 0.0, 0.0],
+            "start_time": "2017-05-31T13:48:30.0",
+            "stop_time": "2018-05-31T13:48:00.0"
+          }
+        ]
+    },
+    "scan_motion": {
+      "count": 2,
+      "parameters": [
+        {
+          "velocity": [1.0, 0.0, 0.0],
+          "start_time": "2019-05-31T00:00:00.0",
+          "stop_time": "2020-05-31T00:00:00.0"
+        },
+        {
+          "velocity": [0.0, 2.0, 0.0],
+          "start_time": "2020-05-31T00:00:00.0",
+          "stop_time": "3021-05-31T00:00:00.0"
+        }
+      ]
+    }
+  },
+  "forces": {
+    "gravity_force": true,
+    "gravity_order": 36,
+    "outer_gravity": true,
+    "solar_pressure_force": true,
+    "gravity_torque": true,
+    "solar_pressure_torque": true,
+    "mangetic_torque": true
+  },
+  "filenames": {
+  "output": {
+    "save_path": "./ephemeris.txt",
+    "telemetry_path": "./telemetry.txt"
+    },
+  "input": {
+      "egm_path": "../Files/EGM2008.dat",
+      "eop_path": "../Files/eop.txt",
+      "tls_path": "../Files/naif0012.tls",
+      "eph_path": "../Files/de440.bsp",
+      "gm_path": "../Files/gm_de440.tpc",
+      "igrf_path": "../Files/2015_2020_2025_igrf.dat"
+    }
+  }
+}
